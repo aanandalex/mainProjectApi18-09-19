@@ -154,8 +154,7 @@ app.get("/getProject", (req, res) => {
 app.post("/postProject", checkAuth, multer({
     storage: storage
 }).single("image"), (req, res) => {
-    // const url = req.protocol + "://" + req.get("host");
-    const url = "https://crowdfundingangular.herokuapp.com";
+    const url = req.protocol + "://" + req.get("host");
     const project = new projectCollection({
         title: req.body.title,
         content: req.body.content,
