@@ -155,7 +155,7 @@ app.post("/postProject", checkAuth, multer({
     storage: storage
 }).single("image"), (req, res) => {
     // const url = req.protocol + "://" + req.get("host");
-    const url = "https://crowdfundingstarter.herokuapp.com";
+    const url = "https://crowdfundingangular.herokuapp.com";
     const project = new projectCollection({
         title: req.body.title,
         content: req.body.content,
